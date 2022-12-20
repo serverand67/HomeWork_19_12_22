@@ -9,14 +9,11 @@
 Console.WriteLine("Введите число");
 int num = int.Parse(Console.ReadLine()!);    // ввод числа с консоли
  
- int GetMaxDigit( int number)               // функция нахождения 2-й цифры из 3-х
+ int Digit( int num)               // функция нахождения 2-й цифры из 3-х
  {
-    int digit1 = num % 10;                 // нахождение 3-го числа (остаток от деления)  123 -- 3
-    int digit2 = num / 10;                 // нахождение первое двойное сисло из          123 -- 12
-    int digit3 = digit2 % 10;              // нахождение второго числа                    123 -- 2
-
- return digit3;
+    int digit=  (num / 10) % 10;                 // нахождение второго числа              
+ return digit;
  }
 
-int secondDigit = GetMaxDigit( num);
+int secondDigit = Digit( num );
 Console.WriteLine( $"вторая цифра числа {num} явлется {secondDigit}" );
